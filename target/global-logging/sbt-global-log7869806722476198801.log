@@ -1,0 +1,145 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\panosmav\AppData\Local\Temp\idea.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\panosmav\AppData\Local\Temp\idea.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.7.1 (Oracle Corporation Java 17.0.2)
+[debug]       Load.loadUnit: plugins took 248.8864ms
+[debug]       Load.loadUnit: defsScala took 0.6163ms
+[debug] [Loading] Scanning directory C:\Users\panosmav\.sbt\1.0\plugins
+[debug]         Load.loadUnit: mkEval took 12.2156ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\panosmav\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 52.8489 ms
+[info] loading settings for project global-plugins from idea.sbt ...
+[debug]           Load.resolveProject(global-plugins) took 154.7299ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\panosmav\.sbt\1.0\plugins, plugins: List(<none>))) took 263.1949ms
+[debug] [Loading] Done in C:\Users\panosmav\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 1269.0315ms
+[debug]       Load.loadUnit: cleanEvalClasses took 37.2374ms
+[debug]     Load.loadUnit(file:/C:/Users/panosmav/.sbt/1.0/plugins/, ...) took 1580.4872ms
+[debug]   Load.apply: load took 2172.9603ms
+[debug]   Load.apply: resolveProjects took 8.3848ms
+[debug]   Load.apply: finalTransforms took 136.0992ms
+[debug]   Load.apply: config.delegates took 18.2327ms
+[debug]   Load.apply: Def.make(settings)... took 863.2615ms
+[debug]   Load.apply: structureIndex took 248.6955ms
+[debug]   Load.apply: mkStreams took 3.325ms
+[info] loading global plugins from C:\Users\panosmav\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 7050.4346ms
+[debug]           Load.loadUnit: plugins took 82.4753ms
+[debug]           Load.loadUnit: defsScala took 0.0051ms
+[debug] [Loading] Scanning directory C:\development\live_sport_events_challenge_zio\project
+[debug]             Load.loadUnit: mkEval took 18.5939ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\development\live_sport_events_challenge_zio\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.946 ms
+[info] loading settings for project live_sport_events_challenge_zio-build from idea.sbt ...
+[debug]               Load.resolveProject(live_sport_events_challenge_zio-build) took 8.1154ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id live_sport_events_challenge_zio-build, base: C:\development\live_sport_events_challenge_zio\project, plugins: List(<none>))) took 11.8857ms
+[debug] [Loading] Done in C:\development\live_sport_events_challenge_zio\project, returning: (live_sport_events_challenge_zio-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 6817.3929ms
+[debug]           Load.loadUnit: cleanEvalClasses took 7.5487ms
+[debug]         Load.loadUnit(file:/C:/development/live_sport_events_challenge_zio/project/, ...) took 6908.8364ms
+[debug]       Load.apply: load took 6911.365ms
+[debug]       Load.apply: resolveProjects took 0.1067ms
+[debug]       Load.apply: finalTransforms took 17.1075ms
+[debug]       Load.apply: config.delegates took 0.501ms
+[debug]       Load.apply: Def.make(settings)... took 138.9111ms
+[debug]       Load.apply: structureIndex took 77.0389ms
+[debug]       Load.apply: mkStreams took 0.0038ms
+[info] loading project definition from C:\development\live_sport_events_challenge_zio\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[debug]     Load.loadUnit: plugins took 16394.6063ms
+[debug]     Load.loadUnit: defsScala took 0.0093ms
+[debug] [Loading] Scanning directory C:\development\live_sport_events_challenge_zio
+[debug]       Load.loadUnit: mkEval took 0.8206ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin)))
+[debug] Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 8.2373 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 141.7082ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: C:\development\live_sport_events_challenge_zio, plugins: List(<none>))) took 155.7418ms
+[debug] [Loading] Done in C:\development\live_sport_events_challenge_zio, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 7828.3202ms
+[debug]     Load.loadUnit: cleanEvalClasses took 76.6882ms
+[debug]   Load.loadUnit(file:/C:/development/live_sport_events_challenge_zio/, ...) took 24301.4018ms
+[debug] Load.apply: load took 24304.1626ms
+[debug] Load.apply: resolveProjects took 0.1926ms
+[debug] Load.apply: finalTransforms took 81.785ms
+[debug] Load.apply: config.delegates took 0.7978ms
+[debug] Load.apply: Def.make(settings)... took 1535.9962ms
+[debug] Load.apply: structureIndex took 205.0764ms
+[debug] Load.apply: mkStreams took 0.0026ms
+[info] set current project to live_sport_events_challenge_zio (in build file:/C:/development/live_sport_events_challenge_zio/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(; set ideaPort in Global := 64740 ; idea-shell, None, None)
+[debug] > Exec(set ideaPort in Global := 64740, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by Compile / compile, Test / compile
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Compile / compile
+[debug] 	Test / compile
+[info] Reapplying settings...
+[info] set current project to live_sport_events_challenge_zio (in build file:/C:/development/live_sport_events_challenge_zio/)
+[debug] > Exec(idea-shell, None, None)
