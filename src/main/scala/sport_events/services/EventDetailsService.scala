@@ -6,11 +6,11 @@ import zio.{IO, UIO, ZIO}
 
 object EventDetailsService {
 
-  def getLastEvent(events: Iterator[Event]) = {
+  def getLastEvent(events:  Seq[Event]) = {
     ZIO.service[Service].flatMap(_.getLastEvent(events))
   }
 
-  def getLastEvents(n: Int, events: Iterator[Event]) = {
+  def getLastEvents(n: Int, events:  Seq[Event]) = {
     ZIO.service[Service].flatMap(_.getLastEvents(n, events))
   }
 
@@ -19,23 +19,22 @@ object EventDetailsService {
   }
 
   trait Service {
-    def getLastEvent(events: Iterator[Event]): ZIO[Any, DomainServiceError, Option[Event]]
-    def getLastEvents(n: Int, events: Iterator[Event]): ZIO[Any, DomainServiceError, Seq[Event]]
+    def getLastEvent(events: Seq[Event]): ZIO[Any, DomainServiceError, Option[Event]]
+    def getLastEvents(n: Int, events: Seq[Event]): ZIO[Any, DomainServiceError, Seq[Event]]
     def getAllEvents(events: Iterator[Event]): ZIO[Any, DomainServiceError, Seq[Event]]
   }
 
 }
 
 case class EventDetailsRepository() extends EventDetailsService.Service {
-  override def getLastEvent(events: Iterator[Event]): ZIO[Any, DomainServiceError, Option[Event]] = IO.succeed(events.toSeq.lastOption)
+  override def getLastEvent(events:  Seq[Event]): ZIO[Any, DomainServiceError, Option[Event]] = IO.succeed(events.toSeq.lastOption)
 
-  override def getLastEvents(n: Int, events: Iterator[Event]): UIO[Seq[Event]] = IO.succeed({
-    val toSeq = events.toSeq
-    val length = toSeq.length
+  override def getLastEvents(n: Int, events: Seq[Event]): UIO[Seq[Event]] = IO.succeed({
+    val length = events.length
     if ((length > n)) {
-      toSeq.drop(toSeq.length - n)
+      events.drop(events.length - n)
     } else {
-      toSeq
+      events
     }
   })
 

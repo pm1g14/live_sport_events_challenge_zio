@@ -20,14 +20,13 @@ object LiveSportEventsApp extends App {
 
   val flow: ZIO[RuntimeEnv, DomainServiceError, Tuple3[Seq[Event], Seq[Event], Option[Event]]] = for {
       sportEvents <- ZIO.service[SportEventsHttpClient.Service]
-        .flatMap(_.getSportEvents("C:\\development\\live_sport_events_challenge_zio\\src\\main\\resources\\sample1.txt"))
+        .flatMap(_.getSportEvents("sample1.txt"))
         .mapError(e => EventsNotStreamedError(e.message))
-      last2Events <- getLastEvents(2, sportEvents)
-      validatedEvents <- ZIO.succeed(sportEvents.filter(_ => validate(last2Events)))
-      lastNEvents <- getLastEvents(5, validatedEvents)
+      validatedEvents <- ZIO.succeed(sportEvents.sliding(2).filter(validate).flatten)
       allEvents <- getAllEvents(validatedEvents)
-      lastEvent <- getLastEvent(validatedEvents)
+      lastNEvents <- getLastEvents(5, allEvents)
+      lastEvent <- getLastEvent(allEvents)
   } yield (lastNEvents, allEvents, lastEvent)
-
+  
   runtime.unsafeRunAsync(flow)
 }

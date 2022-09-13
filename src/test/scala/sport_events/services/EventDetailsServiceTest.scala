@@ -35,23 +35,21 @@ class EventDetailsServiceTest extends AnyFlatSpec with Matchers {
       team2Points = ThreePoints.point,
       score = "2-3"
     )
-  ).iterator
+  )
 
   "getLastEvent" should "return the last event of the list of events" in {
-      zio.Runtime.default.unsafeRun(service.getLastEvent(events)) shouldBe Event(
+      zio.Runtime.default.unsafeRun(service.getLastEvent(events)) should contain(Event(
         matchTime = Duration.fromNanos(10L),
         team = "1",
         lastScoredPoints = TwoPoints,
         team1Points = TwoPoints.point,
         team2Points = ThreePoints.point,
         score = "2-3"
-      )
-
+      ))
   }
 
   "getLastEvent" should "return None for empty stream of events" in {
-    val events = Nil.iterator
-    zio.Runtime.default.unsafeRun(service.getLastEvent(events)) shouldBe None
+    zio.Runtime.default.unsafeRun(service.getLastEvent(Nil)) shouldBe None
   }
 
   "getLastEvents" should "return 2 events" in {
@@ -78,7 +76,7 @@ class EventDetailsServiceTest extends AnyFlatSpec with Matchers {
   }
 
   "getLastEvents" should "return empty for no events" in {
-    zio.Runtime.default.unsafeRun(service.getLastEvents(2, Iterator.empty)) shouldBe Nil
+    zio.Runtime.default.unsafeRun(service.getLastEvents(2, Seq.empty)) shouldBe Nil
   }
 
   "getLastEvents" should "return all events if number of events is less than given number" in {
@@ -113,7 +111,7 @@ class EventDetailsServiceTest extends AnyFlatSpec with Matchers {
   }
 
   "getAllEvents" should "return all events" in {
-    val result = zio.Runtime.default.unsafeRun(service.getAllEvents(events))
+    val result = zio.Runtime.default.unsafeRun(service.getAllEvents(events.iterator))
     result.size shouldBe 3
     result shouldBe Seq(
       Event(

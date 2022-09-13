@@ -19,7 +19,7 @@ class SportEventsServiceClient extends SportEventsHttpClient.Service {
   override def getSportEvents(path: String)(implicit converter: ToDomainAdapter[String, Event]): ZIO[Any, DomainServiceError, Iterator[Event]] = {
     ZIO.fromEither(
       try {
-        val linesIterator = Source.fromFile(path).getLines()
+        val linesIterator = Source.fromResource(path).getLines()
         val converted = linesIterator.flatMap(converter.toDomain)
         Right(converted)
       } catch {
