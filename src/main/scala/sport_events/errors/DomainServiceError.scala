@@ -1,6 +1,6 @@
 package sport_events.errors
 
-sealed trait DomainServiceError {
+sealed trait DomainServiceError extends Throwable {
   val message:String
 }
 

@@ -27,11 +27,10 @@ object EventDetailsService {
 }
 
 case class EventDetailsRepository() extends EventDetailsService.Service {
-  override def getLastEvent(events:  Seq[Event]): ZIO[Any, DomainServiceError, Option[Event]] = IO.succeed(events.toSeq.lastOption)
+  override def getLastEvent(events:  Seq[Event]): ZIO[Any, DomainServiceError, Option[Event]] = IO.succeed(events.lastOption)
 
   override def getLastEvents(n: Int, events: Seq[Event]): UIO[Seq[Event]] = IO.succeed({
-    val length = events.length
-    if ((length > n)) {
+    if ((events.length > n)) {
       events.drop(events.length - n)
     } else {
       events

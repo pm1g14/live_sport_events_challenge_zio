@@ -1,0 +1,45 @@
+[debug] Created transactional ClassFileManager with tempDir = C:\development\live_sport_events_challenge_zio\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] We backup class files:
+[debug] Registering generated classes:
+[debug] 	ToDomainAdapter.class
+[debug] 	ValidPoint$ZeroPoints$.class
+[debug] 	EventDetailsService$.class
+[debug] 	SourceNotFound.class
+[debug] 	LiveSportEventsApp$delayedInit$body.class
+[debug] 	HexConversionUtils$.class
+[debug] 	ValidPoint$OnePoint$.class
+[debug] 	EventsOverview.class
+[debug] 	ValidPoint$TwoPoints$.class
+[debug] 	ValidPoint$.class
+[debug] 	Event$.class
+[debug] 	EventsOverview$.class
+[debug] 	EventsNotStreamedError.class
+[debug] 	LiveEventsValidator.class
+[debug] 	EventsValidator.class
+[debug] 	LiveSportEventsApp.class
+[debug] 	Event.class
+[debug] 	SportEventsHttpClient$Service.class
+[debug] 	ValidPoint.class
+[debug] 	LiveSportEventsApp$.class
+[debug] 	HexToBinaryConversionError$.class
+[debug] 	ToDomainConversionError$.class
+[debug] 	ToDomainConversionError.class
+[debug] 	HexToBinaryConversionError.class
+[debug] 	EventDetailsRepository$.class
+[debug] 	DomainServiceError.class
+[debug] 	SportEventsHttpClient$.class
+[debug] 	HexConversionUtils.class
+[debug] 	EventDetailsService.class
+[debug] 	LiveEventsValidator$.class
+[debug] 	EventDetailsRepository.class
+[debug] 	ToDomainAdapter$$anon$1.class
+[debug] 	ValidPoint$ThreePoints$.class
+[debug] 	SportEventsHttpClient.class
+[debug] 	EventDetailsService$Service.class
+[debug] 	ToDomainAdapter$.class
+[debug] 	EventsNotStreamedError$.class
+[debug] 	SourceNotFound$.class
+[debug] 	LiveSportEventsRuntime.class
+[debug] 	SportEventsServiceClient.class
+[debug] Removing the temporary directory used for backing up class files: C:\development\live_sport_events_challenge_zio\target\scala-2.13\classes.bak
