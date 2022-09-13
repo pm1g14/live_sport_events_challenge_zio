@@ -19,7 +19,7 @@ object EventDetailsService {
   }
 
   trait Service {
-    def getLastEvent(events: Iterator[Event]): ZIO[Any, DomainServiceError, Event]
+    def getLastEvent(events: Iterator[Event]): ZIO[Any, DomainServiceError, Option[Event]]
     def getLastEvents(n: Int, events: Iterator[Event]): ZIO[Any, DomainServiceError, Seq[Event]]
     def getAllEvents(events: Iterator[Event]): ZIO[Any, DomainServiceError, Seq[Event]]
   }
@@ -27,11 +27,16 @@ object EventDetailsService {
 }
 
 case class EventDetailsRepository() extends EventDetailsService.Service {
-  override def getLastEvent(events: Iterator[Event]): ZIO[Any, DomainServiceError, Event] = IO.succeed(events.toSeq.last)
+  override def getLastEvent(events: Iterator[Event]): ZIO[Any, DomainServiceError, Option[Event]] = IO.succeed(events.toSeq.lastOption)
 
   override def getLastEvents(n: Int, events: Iterator[Event]): UIO[Seq[Event]] = IO.succeed({
     val toSeq = events.toSeq
-    toSeq.drop(toSeq.length - n)
+    val length = toSeq.length
+    if ((length > n)) {
+      toSeq.drop(toSeq.length - n)
+    } else {
+      toSeq
+    }
   })
 
   override def getAllEvents(events: Iterator[Event]): UIO[Seq[Event]] = IO.succeed(events.toSeq)

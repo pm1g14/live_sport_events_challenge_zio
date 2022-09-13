@@ -9,6 +9,9 @@ lazy val root = (project in file("."))
 libraryDependencies += "dev.zio" %% "zio" % "2.0.0-M4"
 libraryDependencies += "dev.zio" %% "zio-streams" % "2.0.0-M4"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4"
+libraryDependencies ++= Seq("dev.zio" %% "zio-test" % "2.0.0-M4" % "test",
+  "dev.zio" %% "zio-test-sbt" % "2.0.0-M4" % "test"
+)
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.13" % "test"
 libraryDependencies += "org.mockito" % "mockito-core" % "2.23.4" % Test

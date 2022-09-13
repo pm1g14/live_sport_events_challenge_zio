@@ -15,7 +15,7 @@ object LiveEventsValidator extends EventsValidator[Event] {
 
   override def validate(events: Seq[Event]): Boolean = {
     events match {
-      case Seq(currEvent, prevEvent) => validIndividual(currEvent) && validAgainstPrevious(currEvent, prevEvent)
+      case Seq(prevEvent, currEvent) => validIndividual(currEvent) && validAgainstPrevious(currEvent, prevEvent)
       case _ => false
     }
   }

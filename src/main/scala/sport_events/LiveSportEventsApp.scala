@@ -18,7 +18,7 @@ object LiveSportEventsApp extends App {
 
   val runtime: zio.Runtime.Managed[RuntimeEnv] = new LiveSportEventsRuntime().runtime
 
-  val flow: ZIO[RuntimeEnv, DomainServiceError, Tuple3[Seq[Event], Seq[Event], Event]] = for {
+  val flow: ZIO[RuntimeEnv, DomainServiceError, Tuple3[Seq[Event], Seq[Event], Option[Event]]] = for {
       sportEvents <- ZIO.service[SportEventsHttpClient.Service]
         .flatMap(_.getSportEvents("C:\\development\\live_sport_events_challenge_zio\\src\\main\\resources\\sample1.txt"))
         .mapError(e => EventsNotStreamedError(e.message))

@@ -19,7 +19,7 @@ object ToDomainAdapter {
         case Right(value) =>
           val reverseBits = value.toCharArray.reverse.mkString
           val maybePointsScored = convertBinToDecimal(reverseBits.view.take(2).reverse.mkString)
-          val maybeWhoScored = reverseBits.view.drop(2).reverse.headOption
+          val maybeWhoScored = reverseBits.view.drop(2).headOption
           val maybeTeam2Points = convertBinToDecimal(reverseBits.view.slice(3, 11).reverse.mkString)
           val maybeTeam1Points = convertBinToDecimal(reverseBits.view.slice(11, 19).reverse.mkString)
           val maybeElapsedTime = convertBinToDecimal(reverseBits.view.slice(19, 31).reverse.mkString).map(_.toLong)

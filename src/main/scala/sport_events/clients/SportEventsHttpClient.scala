@@ -1,7 +1,7 @@
 package sport_events.clients
 
 import sport_events.adapters.ToDomainAdapter
-import sport_events.errors.{DomainServiceError, SourceNotFound}
+import sport_events.errors.{DomainServiceError, EventsNotStreamedError, SourceNotFound}
 import sport_events.models.Event
 import zio.ZIO
 
