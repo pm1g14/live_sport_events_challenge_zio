@@ -5,12 +5,10 @@ import org.slf4j.LoggerFactory
 import sport_events.clients.SportEventsHttpClient
 import sport_events.environment.LiveSportEventsRuntime
 import sport_events.errors.EventsNotStreamedError
-import sport_events.models.EventsOverview
 import sport_events.services.EventDetailsService
-import sport_events.services.EventDetailsService.{getAllEvents, getLastEvent, getLastEvents}
 import sport_events.validate.LiveEventsValidator.validate
 import zio.Exit.{Failure, Success}
-import zio.{Exit, Has, ZIO}
+import zio.{Has, ZIO}
 
 object LiveSportEventsApp extends App {
 

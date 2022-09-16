@@ -15,3 +15,4 @@ libraryDependencies ++= Seq("dev.zio" %% "zio-test" % "1.0.16" % "test",
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.13" % "test"
 libraryDependencies += "org.mockito" % "mockito-core" % "2.23.4" % Test
+libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.16.0" % "test"

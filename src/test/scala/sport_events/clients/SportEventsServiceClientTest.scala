@@ -3,6 +3,7 @@ package sport_events.clients
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
+import sport_events.errors.SourceNotFound
 import sport_events.models.Event
 import sport_events.models.ValidPoint.TwoPoints
 
@@ -30,7 +31,10 @@ class SportEventsServiceClientTest extends AnyFlatSpec with Matchers {
   }
 
   "getSportEvents" should "return SourceNotFound for malformed path" in {
-
+    val events = zio.Runtime.default.unsafeRun(
+      service.getSportEvents("C:\\live_sport_events_challenge_zio\\src\\main\\resources\\sample1.txt").either
+    )
+    events shouldBe Left(SourceNotFound("C:\\live_sport_events_challenge_zio\\src\\main\\resources\\sample1.txt"))
   }
 
 }

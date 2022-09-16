@@ -23,6 +23,8 @@ object ValidPoint {
       case _ => ZeroPoints
     }
 
+  val values = Seq(ThreePoints, TwoPoints, OnePoint, ZeroPoints)
+
   case object ThreePoints extends ValidPoint {
     val point: Int = 3
   }
