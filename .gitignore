@@ -1,0 +1,8 @@
+# ignore ALL .log files
+*.log
+*.class
+*.iml
+*.cache
+
+# ignore ALL files in ANY directory named temp
+temp/
